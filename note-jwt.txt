@@ -1,0 +1,73 @@
+https://www.learncodewithdurgesh.com/blogs/jwt-authentication-with-spring-boot-31
+
+youtube
+https://youtu.be/q2l91Ffc_8U?si=GrtaP16rKl2tC0-V
+
+http://localhost:8081/home/users
+
+Now after security
+the default username is user
+and password in logs
+
+http://localhost:8081/logout
+
+http://localhost:8081/home/current-user
+
+JWT - JSON WEB TOKEN
+
+JwtAuthenticationEntryPoint implements AuthenticationEntryPoint method commence for access denied
+
+JwtHelper
+
+JwtAuthenticationFilter
+
+SecurityConfig 
+lot of lambda
+
+JwtRequest,JwtResponse
+
+http://localhost:8081/auth/login
+
+POSTMAN
+POST
+http://localhost:8081/auth/login
+BODY
+{
+  "email": "albin",
+  "password": "abc"
+}
+
+RESPONSE
+{
+    "jwtToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGJpbiIsImlhdCI6MTcyNTcxNjgyNCwiZXhwIjoxNzI1NzM0ODI0fQ.ydIUclm02YLi00xCOuFPPp9GLjaEJIUPB14gmLpWTMyBs5jTd39gqny2hZuIA2VBgMBZtHHiEngtvJ3W-mKRqA",
+    "username": "albin"
+}
+
+GET
+http://localhost:8081/home/users
+HEADER
+Authorization: Bearer token..
+
+RESPONSE
+[
+    {
+        "userId": "cdb4af24-0a02-4b9e-8e74-871256751863",
+        "name": "Albin S",
+        "email": "as@g.com"
+    },
+    {
+        "userId": "6294dda3-e5d8-4fd9-9789-e8c4e3373eae",
+        "name": "Zalbin S",
+        "email": "zs@g.com"
+    },
+    {
+        "userId": "aa8ab3be-8274-43d5-9e4a-292439156051",
+        "name": "Calbin S",
+        "email": "cs@g.com"
+    },
+    {
+        "userId": "fb5ed677-20bb-4131-8dcd-2d855064ff8a",
+        "name": "Balbin S",
+        "email": "bs@g.com"
+    }
+]
