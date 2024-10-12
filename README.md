@@ -1,2 +1,2 @@
-# JwtExampleWithSB3Durgesh
-JwtExampleWithSB3Durgesh
+# Jwt Example With Spring Boot 3 Durgesh
+This is code practice done using youtube tutorial by Durgesh
